@@ -12,7 +12,7 @@ ul {
 }
 
 /* Scrollspy */
-#about, #contact {
+#about, #portfolio, #contact {
 	position: relative;
 	margin-top: 150px;
 	padding-top: 80px;

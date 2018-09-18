@@ -7,5 +7,5 @@ $(document).ready(function(){
 		delay: 500
 	};
 
-	ScrollReveal().reveal(".slide-up", slideUp);
+	ScrollReveal({ viewOffset: { bottom: 200}}).reveal(".slide-up", slideUp);
 });
