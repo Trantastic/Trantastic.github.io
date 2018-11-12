@@ -2,7 +2,7 @@
   "name": "trantastic.github.io",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "keystone.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Trantastic/Trantastic.github.io#readme",
   "dependencies": {
-    "keystone": "^4.0.0"
+    "keystone": "^4.0.0",
+    "pug": "^2.0.3"
   }
 }

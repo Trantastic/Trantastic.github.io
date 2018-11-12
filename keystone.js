@@ -6,7 +6,11 @@ keystone.init({
   'user model': 'User',
   'auto update': true,
   'auth': true,
+  views: 'template/views',
+  'view engine': 'pug',
 });
+
+keystone.set('routes', require('./routes'));
 
 keystone.import('models');
 
