@@ -9,4 +9,5 @@ var routes = {
 exorts = module.exports = function(app) {
     app.use('/', express.static('public'));
     app.get('/blog', routes.views.blog);
+    app.get('/post', routes.views.post);
 };
