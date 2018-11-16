@@ -2,7 +2,7 @@ exports.create = {
   User: [
     {
       displayName: 'user1',
-      email: 'user@keystonejs.com',
+      email: 'admin@admin.com',
       password: 'admin',
     },
   ],

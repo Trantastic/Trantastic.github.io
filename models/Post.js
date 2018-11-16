@@ -14,8 +14,8 @@ Post.add({
   categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 });
 
-Post.schema.virtual('canAccessKeystone').get(function () {
-  return true;
+Post.schema.virtual('content.full').get(function () {
+	return this.content.extended || this.content.brief;
 });
 
 Post.schema.pre('save', function (next) {
@@ -26,5 +26,5 @@ Post.schema.pre('save', function (next) {
   return next();
 });
 
-Post.defaultColumns = 'displayName, email';
+Post.defaultColumns = 'title, state|20%, publishedDate|20%';
 Post.register();
