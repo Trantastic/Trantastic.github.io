@@ -2,11 +2,14 @@
     background-color: #212529; 
 } */
 
-#profile-content {
-    text-align: center;
+#content {
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 3%; 
+}
+
+#profile-content {
+    text-align: center;
 }
 
 #profile-pic {
