@@ -36,3 +36,11 @@
     width: 2rem;
     margin: 1.5%;
 }
+
+.job-title {
+    font-style: oblique;
+}
+
+.skills {
+    font-style: oblique;
+}
