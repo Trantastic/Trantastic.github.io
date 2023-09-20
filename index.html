@@ -130,13 +130,43 @@
                 <ul>
                   <li>Test Steps:
                     <ol>
-                      <li>Enter first name, last name, valid email, 7 or more character password</li>
-                      <li>Click "Submit" button</li>
+                      <li>Enter first name, last name, valid email, 7 or more character password.</li>
+                      <li>Click "Submit" button.</li>
                     </ol>
                   <li>Expected Results:
                     <ul>
-                      <li>Post request to /users returns status code 201.</li>
+                      <li>Post request to /users endpoint returns a 201 status code.</li>
                       <li>The user is redirected to the contact list page.</li>
+                    </ul>
+                  </li>
+                  </li>
+                </ul>
+              <p>Test Case: Verify cancel redirects user to login page</p>
+                <ul>
+                  <li>Test Steps:
+                    <ol>
+                      <li>Enter first name, last name, valid email, 7 or more character password.</li>
+                      <li>Click "Cancel" button.</li>
+                    </ol>
+                  <li>Expected Results:
+                    <ul>
+                      <li>Post request to /login endpoint returns a 3xx status code.</li>
+                      <li>The user is redirected to the login page.</li>
+                    </ul>
+                  </li>
+                  </li>
+                </ul>
+              <p>Test Case: Verify failed user creation</p>
+                <ul>
+                  <li>Test Steps:
+                    <ol>
+                      <li>Leave the input fields blank.</li>
+                      <li>Click "Submit" button.</li>
+                    </ol>
+                  <li>Expected Results:
+                    <ul>
+                      <li>Post request to /user endpoint returns a 400 status code.</li>
+                      <li>The user is presented with an error message.</li>
                     </ul>
                   </li>
                   </li>
