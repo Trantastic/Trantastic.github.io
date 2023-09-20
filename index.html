@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto nav-underline">
             <li class="nav-item">
-              <a class="nav-link" href="#intro">About</a>
+              <a class="nav-link" href="#profile-pic">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#experience">Experience</a>
@@ -44,14 +44,14 @@
     </nav>
     
     <div data-spy="scroll" data-target="#navbar-main" data-offset="0" id="content">
-      <div id="profile-content">
+      <div id="profile-content" style="padding-bottom:10%">
         <img
           src="./img/profile.jpeg"
           alt="Yvette's profile picture with her dog"
           id="profile-pic"
         />
 
-        <h1 id="intro">Hi there! 👋</h1>
+        <h1>Hi there! 👋</h1>
         <p id="bio">
           I'm Yvette, a QA with over 4 years of experience. I specialize in
           designing and executing testing strategies and accessibility testing. I
@@ -75,27 +75,74 @@
         </ul>
       </div>
 
-      <div id="experience">
-        <h1>Experience</h1>
+      <div id="experience" style="padding-bottom:10%">
+        <h2>Experience</h1>
         <p>View my full resume <a href="https://docs.google.com/document/d/1Y2-IUJEw41kBBJa7l_dOZToA0JOnRVE4DkVvwYJ63Jw/edit?usp=sharing">here</a>.</p>
         
-        <h3>Indeed.com, Remote</h2>
-        <h4 class="job-title">QA Team Lead, Oct 2022 - Mar 2023</h4>
-          <p>Designed and executed test plans. Coordinated testing efforts with designers, engineers, and product managers. Implement QA processes to improve product quality and team efficiency.</p>
-          <p class="skills">Skills: designing test strategies, end to end testing, project management, quality management</p>
-        <h4 class="job-title">QA Engineer II, Dec 2020 - Oct 2022 </h4>
+        <h4>Indeed.com, Remote</h2>
+        <h5 class="job-title">QA Team Lead, Oct 2022 - Mar 2023</h4>
+          <p>Designed and executed test plans. Coordinated testing efforts and ensured product requirements were met by collaborating with designers, engineers, and product managers. Implemented QA processes to improve product quality and lead time.</p>
+          <p class="skills">Skills: designing test strategies, end to end testing, project management, implementing QA proccesses</p>
+        <h5 class="job-title">QA Engineer II, Dec 2020 - Oct 2022 </h4>
           <p>Investigated reported defects and collaborated with product team fix them. Worked with engineers to automate manual test cases.</p>
           <p class="skills">Skills: test design, communication, debugging</p>
-        <h4 class="job-title">QA Engineer I, Dec 2018 - Dec 2020</h4>
+        <h5 class="job-title">QA Engineer I, Dec 2018 - Dec 2020</h4>
           <p>Owned manual testing for web and mobile changes. Utilized Chrome DevTools, Android Studio, and Xcode for testing. Wrote detailed test reports. Created and maintained numerous pages of technical documentation.</p>
           <p class="skills">Skills: regression testing, functionality testing, smoke testing, documentation</p>
 
       </div>
 
-      <div id="samples">
-        <h1>Examples of my work</h1>
-        <p>Technical Documentation</p>
-        <p>Test Case Design</p>
+      <div id="samples" style="padding-bottom:10%">
+        <h2>Examples of my work</h1>
+        <p>Technical Documentation - how to perform API testing using Chrome DevTools</p>
+          <p class="d-inline-flex gap-1">
+            <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTechDoc" aria-expanded="false" aria-controls="collapseExample">
+              Show
+            </button>
+          </p>
+          <div class="collapse" id="collapseTechDoc">
+            <div class="card card-body">
+              <h6>Utilizing Chrome DevTools to Quickly Test an API</h6>
+
+              <p>This guide will outline the steps to make a request to an API for testing through your Chrome browser. For this guide, we'll be using a QA test website and Chrome DevTools.</p>
+              <p>Step 1: Open your Chrome browser and load this test website https://thinking-tester-contact-list.herokuapp.com/addUser</p>
+              <p>Step 2: Once the website is done loading, right click anywhere on the site to click "inspect" to open Chrome DevTools.</p>
+              <p>Step 3: Click on the "network" tab. On the webpage, click on the "submit" button to trigger a network request.</p>
+              <p>Step 4: Under "Name", click on the request called "user". You can see the details of the request by clicking on the various tabs to see the status code, error messages, and the payload values of the request.</p>
+              <p>Step 5: Right click on "users" to navigate to "copy" and click on "Copy as fetch".</p>
+              <img src="./img/copy-as-fetch.png"/>
+              <p>Step 6: Click on the "console" tab and paste the fetch request into the console. You'll now be able to edit the request and submit it by pressing the return/enter key to see how the API responds</p>
+              <img src="./img/console.png" style="padding-bottom:1%"/>
+              <p>This is how you can quickly verify how your API through Chrome DevTools.</p>
+            </div>
+          </div>
+        <p style="padding-top:1%">Test Case Design - sample of test cases for a QA testing site</p>
+          <p class="d-inline-flex gap-1">
+            <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTestCase" aria-expanded="false" aria-controls="collapseExample">
+              Show
+            </button>
+          </p>
+          <div class="collapse" id="collapseTestCase">
+            <div class="card card-body">
+              <h6>Test Case Samples</h6>
+              <p>This is a sample of regression test cases for adding a user on a <a href="https://thinking-tester-contact-list.herokuapp.com/addUser" target="_blank">QA test website.</a></p>
+              <p>Test Case: Verify successful user creation</p>
+                <ul>
+                  <li>Test Steps:
+                    <ol>
+                      <li>Enter first name, last name, valid email, 7 or more character password</li>
+                      <li>Click "Submit" button</li>
+                    </ol>
+                  <li>Expected Results:
+                    <ul>
+                      <li>Post request to /users returns status code 201.</li>
+                      <li>The user is redirected to the contact list page.</li>
+                    </ul>
+                  </li>
+                  </li>
+                </ul>
+            </div>
+          </div>
       </div>
     </div>
     
